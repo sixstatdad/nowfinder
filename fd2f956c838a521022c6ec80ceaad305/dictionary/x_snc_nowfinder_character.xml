@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="26c069ec838a521022c6ec80ceaad361" label="Character" max_length="40" name="x_snc_nowfinder_character" type="collection">
+        <element attributes="encode_utf8=false" label="Player's Name" max_length="32" name="player" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Character's Name" max_length="120" name="character" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <index name="index">
+            <element name="player"/>
+        </index>
+        <index name="index2">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>
